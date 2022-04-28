@@ -97,6 +97,8 @@ with map_face_mesh.FaceMesh(min_detection_confidence =0.5, min_tracking_confiden
     while True:
         frame_counter +=1 # frame counter
         ret, frame = camera.read() # getting frame from camera 
+        #flip the frame
+        frame = cv.flip(frame, 1)
         if not ret: 
             break # no more frames break
         #  resizing frame
