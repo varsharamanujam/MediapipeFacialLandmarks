@@ -53,7 +53,7 @@ with map_face_mesh.FaceMesh(
     # starting Video loop here.
     while True: # looping until break
         #get frame from camera every 5 frames
-        waitKey(5)
+        
         ret, frame = camera.read() # getting frame from camera 
         
         if not ret:  # if frame is not retrived
@@ -100,17 +100,18 @@ with map_face_mesh.FaceMesh(
 
             if ratio_l <0.34 : # looking at the left
                 cv2.putText(frame, "You are Looking Left", (150,200), cv2.FONT_HERSHEY_SIMPLEX, 1.5, (0,0,255), 2)
+
             elif ratio_l > 0.54 : # looking at the right
                 cv2.putText(frame, "You are Looking Right", (150,200), cv2.FONT_HERSHEY_SIMPLEX, 1.5, (0,0,255), 2)
             
             #looking at to top
             elif ratio_ltb > 0.485 :
                 cv2.putText(frame, "You are Looking Top", (150,200), cv2.FONT_HERSHEY_SIMPLEX, 1.5, (0,0,255), 2)
+
             #looking at to bottom
             elif ratio_ltb < 0.41 :
-                cv2.putText(frame, "You are Looking Bottom", (150,200), cv2.FONT_HERSHEY_SIMPLEX, 1.5, (0,0,255), 2)
-            elif ratio_ltb > 0.26 and ratio_ltb < 0.38:
-                cv2.putText(frame, "Looking at keyboard", (150,200), cv2.FONT_HERSHEY_SIMPLEX, 1.5, (0,0,255), 2)
+                cv2.putText(frame, "You are Looking Bottom", (150,200), cv2.FONT_HERSHEY_SIMPLEX, 1.5, (0,0,255), 2) 
+            
             
             
         cv2.imshow('frame', frame) # showing frame
