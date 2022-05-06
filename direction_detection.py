@@ -53,9 +53,6 @@ with map_face_mesh.FaceMesh(
     # starting Video loop here.
     while True: # looping until break
         #get frame from camera every 5 frames
-        
-        ret, frame = camera.read() # getting frame from camera 
-        
         if not ret:  # if frame is not retrived
             break # no more frames break
         #flip the frame
