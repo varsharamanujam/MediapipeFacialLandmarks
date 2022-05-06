@@ -47,7 +47,7 @@ def left_position(iris_center, right_point, left_point): # same as right_iris_po
 # camera object 
 camera = cv2.VideoCapture(0)
 ret, frame = camera.read() # getting frame from camera
-counter =0 
+
 with map_face_mesh.FaceMesh(
     max_num_faces = 1,refine_landmarks = True,  min_detection_confidence =0.5, min_tracking_confidence=0.5) as face_mesh: # face mesh object
     # starting Video loop here.
