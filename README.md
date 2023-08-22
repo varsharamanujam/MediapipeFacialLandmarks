@@ -1,6 +1,6 @@
 # mediapie - Facial Landmarks and Iris Detection
 
-`mediapie` is a project that focuses on detecting facial landmarks and eye points, including the iris. It consists of various Python scripts that utilize OpenCV, MediaPipe, and custom utilities.
+This project focuses on detecting facial landmarks and eye points, including the iris. It consists of various Python scripts that utilize OpenCV, MediaPipe, and custom utilities.
 
 ## Table of Contents
 
